@@ -1,0 +1,15 @@
+{
+    "settings": {
+        "existing_cluster_id": "<cluster id>",
+        "notebook_task": {
+            "notebook_path": "/<Folder>/dummyNB",
+            "base_parameters": {
+                "DurationTimeS": "60",
+                "SleepTimeS": "15"
+            }
+        },
+        "email_notifications": {},
+        "name": "dummy_job_01",
+        "max_concurrent_runs": 1
+    }
+}

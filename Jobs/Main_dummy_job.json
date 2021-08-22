@@ -1,0 +1,105 @@
+{
+    "settings": {
+        "email_notifications": {},
+        "name": "Main_dummy_job",
+        "max_concurrent_runs": 1,
+        "tasks": [
+            {
+                "existing_cluster_id": "<cluster id>",
+                "notebook_task": {
+                    "notebook_path": "/<Folder>/executeJob",
+                    "base_parameters": {
+                        "JobId": "3081",
+                        "DBToken": "<admin console token>",
+                        "NBParameters": "{    \"PausetimeS\": 30,    \"TriggerTimeS\": 30,    \"CancellationTimeS\":30,    \"WaitingTimeS\": 7200,    \"ResultTimeS\": 120 }",
+                        "workspaceId": "<Databricks Workspace URL>"
+                    }
+                },
+                "email_notifications": {},
+                "task_key": "job_dummy_01"
+            },
+            {
+                "existing_cluster_id": "<cluster id>",
+                "notebook_task": {
+                    "notebook_path": "/<Folder>/executeJob",
+                    "base_parameters": {
+                        "JobId": "3286",
+                        "DBToken": "<admin console token>",
+                        "NBParameters": "{    \"PausetimeS\": 30,    \"TriggerTimeS\": 30,    \"CancellationTimeS\":30,    \"WaitingTimeS\": 7200,    \"ResultTimeS\": 120 }",
+                        "workspaceId": "<Databricks Workspace URL>"
+                    }
+                },
+                "email_notifications": {},
+                "task_key": "job_dummy_05",
+                "depends_on": [
+                    {
+                        "task_key": "job_dummy_03"
+                    },
+                    {
+                        "task_key": "job_dummy_02"
+                    }
+                ]
+            },
+            {
+                "existing_cluster_id": "<cluster id>",
+                "notebook_task": {
+                    "notebook_path": "/<Folder>/executeJob",
+                    "base_parameters": {
+                        "JobId": "3160",
+                        "DBToken": "<admin console token>",
+                        "NBParameters": "{    \"PausetimeS\": 30,    \"TriggerTimeS\": 30,    \"CancellationTimeS\":30,    \"WaitingTimeS\": 7200,    \"ResultTimeS\": 120 }",
+                        "workspaceId": "<Databricks Workspace URL>"
+                    }
+                },
+                "email_notifications": {},
+                "task_key": "job_dummy_03",
+                "depends_on": [
+                    {
+                        "task_key": "job_dummy_01"
+                    }
+                ]
+            },
+            {
+                "existing_cluster_id": "<cluster id>",
+                "notebook_task": {
+                    "notebook_path": "/<Folder>/executeJob",
+                    "base_parameters": {
+                        "JobId": "3086",
+                        "DBToken": "<admin console token>",
+                        "NBParameters": "{    \"PausetimeS\": 30,    \"TriggerTimeS\": 30,    \"CancellationTimeS\":30,    \"WaitingTimeS\": 7200,    \"ResultTimeS\": 120 }",
+                        "workspaceId": "<Databricks Workspace URL>"
+                    }
+                },
+                "email_notifications": {},
+                "task_key": "job_dummy_02",
+                "depends_on": [
+                    {
+                        "task_key": "job_dummy_01"
+                    }
+                ]
+            },
+            {
+                "existing_cluster_id": "<cluster id>",
+                "notebook_task": {
+                    "notebook_path": "/<Folder>/executeJob",
+                    "base_parameters": {
+                        "JobId": "3228",
+                        "DBToken": "<admin console token>",
+                        "NBParameters": "{    \"PausetimeS\": 30,    \"TriggerTimeS\": 30,    \"CancellationTimeS\":30,    \"WaitingTimeS\": 7200,    \"ResultTimeS\": 120 }",
+                        "workspaceId": "<Databricks Workspace URL>"
+                    }
+                },
+                "email_notifications": {},
+                "task_key": "job_dummy_04",
+                "depends_on": [
+                    {
+                        "task_key": "job_dummy_02"
+                    },
+                    {
+                        "task_key": "job_dummy_03"
+                    }
+                ]
+            }
+        ]
+    }
+}
